@@ -64,8 +64,6 @@ namespace CatalogoGM.EntidadesDeNegocio
 
         public string Version { get; set;}
 
-        public TipoGenero TipoGenero { get; set;}
-
         [NotMapped]
         public int Top_Aux { get; set;}
 
