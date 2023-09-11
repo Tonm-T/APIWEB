@@ -16,6 +16,8 @@ namespace CatalogoGM.EntidadesDeNegocio
         [Required(ErrorMessage = "Tipo es Obligatorio")]
         [StringLength(50, ErrorMessage = "Maximo 50 Caracteres")]
         public string Tipo { get; set; }
+        public CaracteristicasGame CaracteristicasGame { get; set; }
+
         [NotMapped]
         public int top_aux {  get; set; }
         public List<CaracteristicasGame> caracteristicas { get; set;}
