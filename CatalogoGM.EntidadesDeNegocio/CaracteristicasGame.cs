@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -25,7 +26,7 @@ namespace CatalogoGM.EntidadesDeNegocio
         public string Titulo { get; set; }
 
         [Required(ErrorMessage = "Img es Obligatoria")]
-        [StringLength(1, ErrorMessage = "1 img por Titulo")]
+        [StringLength(350, ErrorMessage = "350 img por Titulo")]
 
         public string Img { get; set; }
 
@@ -57,7 +58,7 @@ namespace CatalogoGM.EntidadesDeNegocio
         [Required(ErrorMessage = "Fecha es Obligatoria")]
         [StringLength(30, ErrorMessage = "Maximo 30 Caracteres")]
 
-        public DateTime Fecha { get; set;}
+        public string Fecha { get; set;}
 
         [Required(ErrorMessage = "Version es Obligatoria")]
         [StringLength(30, ErrorMessage = "Maximo 30 Caracteres")]
@@ -66,7 +67,7 @@ namespace CatalogoGM.EntidadesDeNegocio
 
         [NotMapped]
         public int Top_Aux { get; set;}
-
+        [ValidateNever]
         public List<TipoGenero> TipoGenero { get; set; }
     }
 }

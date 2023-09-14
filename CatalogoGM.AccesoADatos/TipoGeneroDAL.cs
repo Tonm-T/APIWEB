@@ -15,8 +15,15 @@ namespace CatalogoGM.AccesoADatos
             int result = 0;
             using (var dbcontext = new ComunDB())
             {
-                dbcontext.Add<TipoGenero>(pTipoGenero);
-                result = await dbcontext.SaveChangesAsync();
+                try
+                {
+                    dbcontext.TipoGeneros.Add(pTipoGenero);
+                    result = await dbcontext.SaveChangesAsync();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
             }
             return result;
         }
@@ -52,7 +59,7 @@ namespace CatalogoGM.AccesoADatos
             }
             return tipogenero;
         }
-        public static async Task<List<TipoGenero>> ObtenerTodosAsync(TipoGenero pTipoGenero)
+        public static async Task<List<TipoGenero>> ObtenerTodosAsync()
         {
             var tipogeneros = new List<TipoGenero>();
             using (var dbcontext = new ComunDB())

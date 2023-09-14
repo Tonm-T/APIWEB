@@ -51,7 +51,7 @@ namespace CatalogoGM.AccesoADatos
                 rol = await dbcontext.Rol.FirstOrDefaultAsync(s => s.Id.Equals(pRol.Id));
             }return rol;
         }
-        public static async Task<List<Rol>> ObtenerTodosAsync(Rol pRol)
+        public static async Task<List<Rol>> ObtenerTodosAsync()
         {
             var roles = new List<Rol>();
             using (var dbcontext = new ComunDB())
@@ -86,5 +86,6 @@ namespace CatalogoGM.AccesoADatos
             }
             return roles;
         }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -19,6 +20,7 @@ namespace CatalogoGM.EntidadesDeNegocio
 
         [NotMapped]
         public int Top_Aux { get; set; }
+        [ValidateNever]
         public List<Usuario> Usuarios { get; set; }
     }
 }

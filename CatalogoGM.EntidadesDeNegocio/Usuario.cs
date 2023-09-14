@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -41,6 +42,7 @@ namespace CatalogoGM.EntidadesDeNegocio
         [Display(Name = "Fecha Registro")]
         public DateTime FechaRegistro { get; set; }
 
+        [ValidateNever]
         public Rol Rol { get; set; }
 
         [NotMapped]

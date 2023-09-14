@@ -20,7 +20,7 @@ namespace CatalogoGM.AccesoADatos
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-V7KMQ9L\SQLEXPRESS;Initial Catalog=ApiGame;Integrated Security=True; encrypt = false; trustServerCertificate = false");
         }
     }
 }
