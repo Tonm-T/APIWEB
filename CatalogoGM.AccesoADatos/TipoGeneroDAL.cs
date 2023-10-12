@@ -45,7 +45,7 @@ namespace CatalogoGM.AccesoADatos
             using (var dbcontext = new ComunDB())
             {
                 var tipogenero = await dbcontext.TipoGeneros.FirstOrDefaultAsync(s => s.Id == pTipoGenero.Id);
-                dbcontext.TipoGeneros.Remove(pTipoGenero);
+                dbcontext.TipoGeneros.Remove(tipogenero);
                 result = await dbcontext.SaveChangesAsync();
             }
             return result;

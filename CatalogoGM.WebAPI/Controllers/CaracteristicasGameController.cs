@@ -1,6 +1,7 @@
 ﻿using CatalogoGM.AccesoADatos;
 using CatalogoGM.EntidadesDeNegocio;
 using CatalogoGM.LogicaDeNegocio;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
@@ -14,20 +15,21 @@ namespace CatalogoGM.WebAPI.Controllers
         private CaracteristicasGameBL caracteristicasGameBL = new CaracteristicasGameBL();
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IEnumerable<CaracteristicasGame>> Get()
         {
             return await caracteristicasGameBL.ObtenerTodosAsync();
         }
 
-        //[HttpGet("{id}")]
-        //public async Task<CaracteristicasGame> Get(int id)
-        //{
-        //    CaracteristicasGame caracteristicasGame = new CaracteristicasGame();
-        //    caracteristicasGame.Id = id;
-        //    return await caracteristicasGameBL.ObtenerTodosAsync(caracteristicasGame);
-        //}
+        [HttpGet("{id}")]
+        public async Task<CaracteristicasGame> Get(int id)
+        {
+            CaracteristicasGame caracteristicasGame = new CaracteristicasGame();
+            caracteristicasGame.Id = id;
+            return await caracteristicasGameBL.ObtenerPorIdAsync(caracteristicasGame);
+        }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult> Post([FromBody] CaracteristicasGame caracteristicasGame)
         {
             try

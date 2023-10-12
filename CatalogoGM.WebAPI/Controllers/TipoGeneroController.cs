@@ -62,7 +62,7 @@ namespace CatalogoGM.WebAPI.Controllers
                 await tipoGeneroBL.EliminarAsync(tipogenero);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return BadRequest();
             }

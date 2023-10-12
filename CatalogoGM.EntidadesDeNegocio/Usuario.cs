@@ -33,7 +33,7 @@ namespace CatalogoGM.EntidadesDeNegocio
 
         [Required(ErrorMessage = "Password es Obligatorio")]
         [DataType(DataType.Password)]
-        [StringLength(30, ErrorMessage = "Maximo 30 Caracteres")]
+        [StringLength(350, ErrorMessage = "Maximo 350 Caracteres")]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Estatus es Obligatorio")]
@@ -50,7 +50,7 @@ namespace CatalogoGM.EntidadesDeNegocio
 
         [NotMapped]
         [Required(ErrorMessage = "Confirmar el Password")]
-        [StringLength(30, ErrorMessage = "Caracteres entre 5 a 30", MinimumLength = 5)]
+        [StringLength(350, ErrorMessage = "Caracteres entre 350", MinimumLength = 5)]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Password deben ser iguales")]
         [Display(Name = "Confirmar Password")]

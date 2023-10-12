@@ -28,11 +28,11 @@ namespace CatalogoGM.AccesoADatos
             using (var dbcontext = new ComunDB())
             {
                 var caracteristicagame = await dbcontext.CaracteristicasGames.FirstOrDefaultAsync(s => s.Id == pCaracteristicasGame.Id);
-                caracteristicagame.GeneroId = pCaracteristicasGame.GeneroId;
+                caracteristicagame.TipoGenerosId = pCaracteristicasGame.TipoGenerosId;
                 caracteristicagame.Titulo = pCaracteristicasGame.Titulo;
                 caracteristicagame.Nombre = pCaracteristicasGame.Nombre;
                 caracteristicagame.Img = pCaracteristicasGame.Img;
-                caracteristicagame.Plataformma = pCaracteristicasGame.Plataformma;
+                caracteristicagame.Plataforma = pCaracteristicasGame.Plataforma;
                 caracteristicagame.Genero = pCaracteristicasGame.Genero;
                 caracteristicagame.Formato = pCaracteristicasGame.Formato;
                 caracteristicagame.size = pCaracteristicasGame.size;
@@ -85,8 +85,8 @@ namespace CatalogoGM.AccesoADatos
             if (pCaracteristicasGame.Id > 0)
                 pQuery = pQuery.Where(s => s.Id == pCaracteristicasGame.Id);
 
-            if (pCaracteristicasGame.GeneroId > 0)
-                pQuery = pQuery.Where(s => s.GeneroId == pCaracteristicasGame.GeneroId);
+            if (pCaracteristicasGame.TipoGenerosId > 0)
+                pQuery = pQuery.Where(s => s.TipoGenerosId == pCaracteristicasGame.TipoGenerosId);
 
             if (!string.IsNullOrWhiteSpace(pCaracteristicasGame.Titulo))
                 pQuery = pQuery.Where(s => s.Titulo.Contains(pCaracteristicasGame.Titulo));
@@ -100,8 +100,8 @@ namespace CatalogoGM.AccesoADatos
             if (!string.IsNullOrWhiteSpace(pCaracteristicasGame.Nombre))
                 pQuery = pQuery.Where(s => s.Nombre.Contains(pCaracteristicasGame.Nombre));
 
-            if (!string.IsNullOrWhiteSpace(pCaracteristicasGame.Plataformma))
-                pQuery = pQuery.Where(s => s.Plataformma.Contains(pCaracteristicasGame.Plataformma));
+            if (!string.IsNullOrWhiteSpace(pCaracteristicasGame.Plataforma))
+                pQuery = pQuery.Where(s => s.Plataforma.Contains(pCaracteristicasGame.Plataforma));
 
             if (!string.IsNullOrWhiteSpace(pCaracteristicasGame.Genero))
                 pQuery = pQuery.Where(s => s.Genero.Contains(pCaracteristicasGame.Genero));
@@ -109,8 +109,8 @@ namespace CatalogoGM.AccesoADatos
             if (!string.IsNullOrWhiteSpace(pCaracteristicasGame.Formato))
                 pQuery = pQuery.Where(s => s.Formato.Contains(pCaracteristicasGame.Formato));
 
-            if (pCaracteristicasGame.size > 0)
-                pQuery = pQuery.Where(s => s.size == pCaracteristicasGame.size);
+            if (!string.IsNullOrWhiteSpace(pCaracteristicasGame.size))
+                pQuery = pQuery.Where(s => s.size.Contains(pCaracteristicasGame.size));
 
             if (!string.IsNullOrWhiteSpace(pCaracteristicasGame.Fecha))
                 pQuery = pQuery.Where(s => s.Fecha.Contains(pCaracteristicasGame.Fecha));

@@ -51,6 +51,7 @@ namespace CatalogoGM.AccesoADatos
             return result;
         }
 
+
         public static async Task<int> ModificarAsync(Usuario pUsuario)
         {
             int result = 0;

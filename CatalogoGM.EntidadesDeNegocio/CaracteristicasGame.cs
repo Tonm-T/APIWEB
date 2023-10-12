@@ -14,11 +14,11 @@ namespace CatalogoGM.EntidadesDeNegocio
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("TipoGenero")]
+        [ForeignKey("TipoGenerosId")]
         [Required(ErrorMessage = "Genero es Obligatorio")]
         [Display(Name = "TipoGenero")]
 
-        public int GeneroId {  get; set; }
+        public int TipoGenerosId {  get; set; }
 
         [Required(ErrorMessage = "Titulo es Obligatorio")]
         [StringLength(50, ErrorMessage = "Maximo 50 Caracteres")]
@@ -38,7 +38,7 @@ namespace CatalogoGM.EntidadesDeNegocio
         [Required(ErrorMessage = "Plataforma es Obligatoria")]
         [StringLength(30, ErrorMessage = "Maximo 30 Caracteres")]
 
-        public string Plataformma { get; set;}
+        public string Plataforma { get; set;}
 
         [Required(ErrorMessage = "Genero es Obligatoria")]
         [StringLength(30, ErrorMessage = "Maximo 30 Caracteres")]
@@ -53,7 +53,7 @@ namespace CatalogoGM.EntidadesDeNegocio
         [Required(ErrorMessage = "size es Obligatorio")]
         [StringLength(30, ErrorMessage = "Maximo  30 Caracteres")]
 
-        public int size {  get; set; }
+        public string size {  get; set; }
 
         [Required(ErrorMessage = "Fecha es Obligatoria")]
         [StringLength(30, ErrorMessage = "Maximo 30 Caracteres")]

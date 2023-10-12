@@ -12,20 +12,20 @@ namespace CatalogoGM.AccesoADatos.Tests
     [TestClass()]
     public class CaracterisricasGameDALTests
     {
-        private static CaracteristicasGame caracteristicaInicial = new CaracteristicasGame { Id = 2, GeneroId = 2};
+        private static CaracteristicasGame caracteristicaInicial = new CaracteristicasGame { Id = 2, TipoGenerosId = 2};
 
         [TestMethod()]
         public async Task T1CrearAsyncTest()
         {
             var caracteristica = new CaracteristicasGame();
-            caracteristicaInicial.GeneroId = caracteristicaInicial.GeneroId;
+            caracteristicaInicial.TipoGenerosId = caracteristicaInicial.TipoGenerosId;
             caracteristicaInicial.Titulo = "Guerra";
             caracteristicaInicial.Img = "img";
             caracteristicaInicial.Nombre = "Call of Duty";
-            caracteristicaInicial.Plataformma = "Utorrent";
+            caracteristicaInicial.Plataforma = "Utorrent";
             caracteristicaInicial.Genero = "Accion";
             caracteristicaInicial.Formato = "ISO";
-            caracteristicaInicial.size = 40;
+            caracteristicaInicial.size = "40";
             caracteristicaInicial.Version = "1.5.01";
             int result = await CaracterisricasGameDAL.CrearAsync(caracteristicaInicial);
             Assert.AreEqual(0, result);
@@ -35,14 +35,14 @@ namespace CatalogoGM.AccesoADatos.Tests
         public async Task T2ModificarAsyncTest()
         {
             var caracteristica = new CaracteristicasGame();
-            caracteristicaInicial.GeneroId = caracteristicaInicial.GeneroId;
+            caracteristicaInicial.TipoGenerosId = caracteristicaInicial.TipoGenerosId;
             caracteristicaInicial.Titulo = "Guerra";
             caracteristicaInicial.Img = "img";
             caracteristicaInicial.Nombre = "Call of Duty";
-            caracteristicaInicial.Plataformma = "Utorrent";
+            caracteristicaInicial.Plataforma = "Utorrent";
             caracteristicaInicial.Genero = "Accion";
             caracteristicaInicial.Formato = "ISO";
-            caracteristicaInicial.size = 40;
+            caracteristicaInicial.size = "40";
             caracteristicaInicial.Version = "1.5.01";
             int result = await CaracterisricasGameDAL.ModificarAsync(caracteristicaInicial);
             Assert.AreEqual(0, result);
@@ -71,10 +71,10 @@ namespace CatalogoGM.AccesoADatos.Tests
             caracteristicaInicial.Titulo = "Guerra";
             caracteristicaInicial.Img = "img";
             caracteristicaInicial.Nombre = "Call of Duty";
-            caracteristicaInicial.Plataformma = "Utorrent";
+            caracteristicaInicial.Plataforma = "Utorrent";
             caracteristicaInicial.Genero = "Accion";
             caracteristicaInicial.Formato = "ISO";
-            caracteristicaInicial.size = 40;
+            caracteristicaInicial.size = "40";
             caracteristicaInicial.Version = "1.5.01";
             var resultCaracteristica = await CaracterisricasGameDAL.BuscarAsync(caracteristicaInicial);
             Assert.AreEqual(0, resultCaracteristica?.Count);
