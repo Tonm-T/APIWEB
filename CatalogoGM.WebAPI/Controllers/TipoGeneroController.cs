@@ -15,6 +15,7 @@ namespace CatalogoGM.WebAPI.Controllers
         private TipoGeneroBL tipoGeneroBL = new TipoGeneroBL();
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IEnumerable<TipoGenero>> Get()
         {
             return await tipoGeneroBL.ObtenerTodosAsync();
@@ -39,7 +40,7 @@ namespace CatalogoGM.WebAPI.Controllers
                 return BadRequest();
             }
         }
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] TipoGenero tipoGenero)
         {
             if (tipoGenero.Id == id)

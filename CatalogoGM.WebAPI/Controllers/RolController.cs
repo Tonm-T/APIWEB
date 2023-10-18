@@ -39,7 +39,7 @@ namespace CatalogoGM.WebAPI.Controllers
                 return BadRequest();
             }
         }
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Rol rol)
         {
             if (rol.Id == id)

@@ -42,7 +42,7 @@ namespace CatalogoGM.WebAPI.Controllers
                 return BadRequest();
             }
         }
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] CaracteristicasGame caracteristicasGame)
         {
             if (caracteristicasGame.Id == id)
