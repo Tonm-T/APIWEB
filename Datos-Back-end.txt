@@ -1,0 +1,87 @@
+
+[
+  {
+    "id": 2,
+    "tipoGenerosId": 1,
+    "titulo": "Accion",
+    "img": "https://www.gamestorrents.fm/wp-content/uploads/portadas/Call-Of-Duty-Black-OPS-2-[English][2DVDs][SKIDROW]-(Poster).jpg",
+    "nombre": "Call Of Duty Black OPS 2",
+    "plataforma": "GamesTorrent",
+    "genero": "Shotter",
+    "formato": "ISO                                               ",
+    "size": "15GB",
+    "fecha": "11/10/2013",
+    "version": "https://www.gamestorrents.fm/wp-content/uploads/files/Call-Of-Duty-Black-OPS-2-[English][2DVDs][SKIDROW]-(Torrent).torrent",
+    "top_Aux": 0
+  },
+  {
+    "id": 3,
+    "tipoGenerosId": 1,
+    "titulo": "Accion",
+    "img": "https://static.posters.cz/image/750/posters/call-of-duty-black-ops-3-cover-i32831.jpg",
+    "nombre": "Call of Duty Black Ops III",
+    "plataforma": "GamesTorrent",
+    "genero": "Shotter",
+    "formato": "ISO                                               ",
+    "size": "60GB",
+    "fecha": "01/05/2016",
+    "version": "https://www.gamestorrents.fm/wp-content/uploads/files/1510118395-Call.of.Duty.Black.Ops.III.MULTI.ELAMIGOS.WwW.GamesTorrents.CoM.torrent",
+    "top_Aux": 0
+  },
+  {
+    "id": 4,
+    "tipoGenerosId": 1,
+    "titulo": "Accion",
+    "img": "https://www.callofduty.com/content/dam/atvi/callofduty/blackops4/media-landing-page/bo4-dde-pc.jpg",
+    "nombre": "Call of Duty®: Black Ops 4",
+    "plataforma": "GamesTorrent",
+    "genero": "Shotter",
+    "formato": "ISO                                               ",
+    "size": "70GB",
+    "fecha": "12/10/2018",
+    "version": "https://www.gamestorrents.fm/wp-content/uploads/files/1682886517-Call.of.Duty.Black.Ops.4.v296.5968.49.0.0.2.69365-P2P.torrent",
+    "top_Aux": 0
+  },
+  {
+    "id": 5,
+    "tipoGenerosId": 2,
+    "titulo": "Carreras",
+    "img": "https://www.gamestorrents.fm/wp-content/uploads/portadas/Need-For-Speed-Rivals-[MULTI9][RELOADED]-(Poster).jpg",
+    "nombre": "Need For Speed Rivals",
+    "plataforma": "GamesTorrent",
+    "genero": "Driving",
+    "formato": "ISO                                               ",
+    "size": "50GB",
+    "fecha": "15/11/2013",
+    "version": "https://www.gamestorrents.fm/wp-content/uploads/files/Need-For-Speed-Rivals-[MULTI9][RELOADED]-(Torrent).torrent",
+    "top_Aux": 0
+  },
+  {
+    "id": 6,
+    "tipoGenerosId": 4,
+    "titulo": "Supervivencia",
+    "img": "https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/99/EP9000-NPEA00435_00-THELASTOFUSDIG01/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720",
+    "nombre": "The Last of Us™ Parte I",
+    "plataforma": "GamesTorrent",
+    "genero": "Driving",
+    "formato": "ISO                                               ",
+    "size": "70GB",
+    "fecha": "14/06/2013",
+    "version": "https://www.gamestorrents.fm/wp-content/uploads/files/1689784492-The.Last.of.Us.Part.I.v1.1.1.0-P2P.torrent",
+    "top_Aux": 0
+  },
+  {
+    "id": 7,
+    "tipoGenerosId": 1,
+    "titulo": "Accion",
+    "img": "https://digital.datablitz.com.ph/cdn/shop/products/DATABLITZ_CyberPunk_1200x1200.png?v=1672379201",
+    "nombre": "Cyberpunk 2077",
+    "plataforma": "GamesTorrent",
+    "genero": "Driving",
+    "formato": "ISO                                               ",
+    "size": "60GB",
+    "fecha": "25/06/2023",
+    "version": "https://www.gamestorrents.fm/wp-content/uploads/files/1696517962-Cyberpunk.2077.Phantom.Liberty.v2.01-GOG.torrent",
+    "top_Aux": 0
+  }
+]

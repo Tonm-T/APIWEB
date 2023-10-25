@@ -31,7 +31,7 @@ namespace CatalogoGM.EntidadesDeNegocio
         public string Img { get; set; }
 
         [Required(ErrorMessage = "Nombre es Obligatorio")]
-        [StringLength(30, ErrorMessage = "Maximo 30 Caracteres")]
+        [StringLength(50, ErrorMessage = "Maximo 50 Caracteres")]
 
         public string Nombre { get; set; }
 
@@ -61,7 +61,7 @@ namespace CatalogoGM.EntidadesDeNegocio
         public string Fecha { get; set;}
 
         [Required(ErrorMessage = "Version es Obligatoria")]
-        [StringLength(30, ErrorMessage = "Maximo 30 Caracteres")]
+        [StringLength(200, ErrorMessage = "Maximo 200 Caracteres")]
 
         public string Version { get; set;}
 
